@@ -8,7 +8,7 @@ const ITEMS = [
   { id: "projects", label: "Projects", href: "#projects", icon: "grid_view" },
   { id: "experience", label: "Experience", href: "#experience", icon: "timeline" },
   { id: "contact", label: "Contact", href: "#contact", icon: "mail" },
-  { id: "resume", label: "Resume", href: "#resume", icon: "description", download: true },
+  { id: "resume", label: "Resume", href: "https://drive.google.com/uc?export=download&id=1IGaHxcHv16C6HOgOcwnXx9QS-oFXsv5-", icon: "description", download: true },
 ];
 
 function DockItem({ mouseX, icon, label, href, download }: {

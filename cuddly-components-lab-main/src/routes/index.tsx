@@ -904,7 +904,7 @@ function Portfolio() {
           <div className="flex gap-6">
             <a href="https://github.com/Vaishnavi1325/" target="_blank" rel="noreferrer" data-cursor="link">GitHub</a>
             <a href="https://www.linkedin.com/in/vaishnavi1325/" target="_blank" rel="noreferrer" data-cursor="link">LinkedIn</a>
-            <a href="https://docs.google.com/document/d/1cdfFdK2U9cY8Lpbt2vBe1uxsKZ5lmu76/edit?usp=sharing&ouid=102870744013068861118&rtpof=true&sd=true" data-cursor="download">Resume ↓</a>
+            <a href="https://drive.google.com/file/d/1IGaHxcHv16C6HOgOcwnXx9QS-oFXsv5-/view?usp=sharing" data-cursor="download">Resume ↓</a>
           </div>
         </footer>
       </main>
