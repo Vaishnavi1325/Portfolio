@@ -2,7 +2,7 @@
 
 A premium developer portfolio built with React, TanStack Start, Tailwind CSS, and Motion. Features a particle-typography hero, custom cursor, magnetic buttons, scroll-velocity bands, interactive project showcases, and a terminal-style contact form.
 
-**Live:** _add your deployed URL here_
+**Live:**[Portfolio](https://portfolio-fawn-theta-90.vercel.app/)
 
 ## ✨ Features
 
