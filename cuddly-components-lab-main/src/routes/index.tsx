@@ -240,7 +240,7 @@ function Modal({ open, onClose, title, children }: {
 }) {
   if (!open) return null;
   return (
-    <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-300 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-background/80 backdrop-blur-md" onClick={onClose} />
       <motion.div
         initial={{ scale: 0.95, opacity: 0, y: 20 }}
@@ -442,13 +442,13 @@ function ContactForm() {
           required
           name="name"
           placeholder="Name"
-          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30"
+          className="w-full bg-white/3 border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30"
         />
         <input
           name="email"
           type="email"
           placeholder="Email (optional, for reply)"
-          className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30"
+          className="w-full bg-white/3 border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30"
         />
       </div>
       <textarea
@@ -456,7 +456,7 @@ function ContactForm() {
         name="message"
         rows={5}
         placeholder="Message"
-        className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30 resize-none"
+        className="w-full bg-white/3 border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-foreground/30 transition-colors placeholder:text-foreground/30 resize-none"
       />
       <MagneticButton
         as="button"
@@ -492,7 +492,7 @@ function SkillCard({ group }: { group: (typeof SKILL_GROUPS)[number] }) {
       <div
         ref={ref}
         onMouseMove={onMove}
-        className="relative h-full rounded-2xl border border-white/10 bg-white/[0.02] p-7 overflow-hidden group hover:border-white/20 hover:shadow-[0_8px_40px_oklch(0.62_0.14_250/0.08)] transition-[border-color,box-shadow] duration-500"
+        className="relative h-full rounded-2xl border border-white/10 bg-white/2 p-7 overflow-hidden group hover:border-white/20 hover:shadow-[0_8px_40px_oklch(0.62_0.14_250/0.08)] transition-[border-color,box-shadow] duration-500"
       >
         <motion.div
           style={{ x: sx, y: sy }}
@@ -506,7 +506,7 @@ function SkillCard({ group }: { group: (typeof SKILL_GROUPS)[number] }) {
             {group.items.map((it) => (
               <span
                 key={it}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-foreground/80"
+                className="rounded-full border border-white/10 bg-white/3 px-3 py-1 text-xs text-foreground/80"
               >
                 {it}
               </span>
@@ -537,7 +537,7 @@ function Portfolio() {
           {/* Layered aurora: one soft blue bloom behind the name, a horizon line below */}
           <div aria-hidden className="absolute inset-0 z-0 pointer-events-none">
             <div className="hero-aurora absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 h-[55vh] w-[92vw] max-w-5xl rounded-full bg-[radial-gradient(ellipse_at_center,oklch(0.5_0.12_252/0.14),transparent_65%)] blur-2xl" />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-[72vw] max-w-4xl bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-[72vw] max-w-4xl bg-linear-to-r from-transparent via-accent/30 to-transparent" />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-36 w-[72vw] max-w-4xl bg-[radial-gradient(ellipse_at_bottom,oklch(0.55_0.13_250/0.08),transparent_70%)]" />
           </div>
 
@@ -546,7 +546,7 @@ function Portfolio() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 mb-12 font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/60"
+              className="inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/3 px-4 py-1.5 mb-12 font-mono text-[10px] uppercase tracking-[0.3em] text-foreground/60"
             >
               <span className="relative flex h-1.5 w-1.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent/60" />
@@ -554,7 +554,7 @@ function Portfolio() {
               </span>
               Open to opportunities
             </motion.div>
-            <div className="w-full min-h-[200px] md:min-h-[280px] relative mb-4">
+            <div className="w-full min-h-50 md:min-h-70 relative mb-4">
               <CursorDrivenParticleTypography
                 text="Vaishnavi Shukla"
                 fontSize={120}
@@ -596,7 +596,7 @@ function Portfolio() {
           <ScrollBasedVelocity
             text="BACKEND — AI — NODEJS — SYSTEM DESIGN —"
             default_velocity={3}
-            className="text-center text-5xl font-extralight tracking-[-0.02em] text-foreground/[0.08] md:text-8xl md:leading-none uppercase"
+            className="text-center text-5xl font-extralight tracking-[-0.02em] text-foreground/8 md:text-8xl md:leading-none uppercase"
           />
         </div>
 
@@ -632,7 +632,7 @@ function Portfolio() {
               </div>
             </div>
 
-            <div className="glass-panel rounded-2xl p-6 font-mono text-xs h-[380px] overflow-hidden relative">
+            <div className="glass-panel rounded-2xl p-6 font-mono text-xs h-95 overflow-hidden relative">
               <div className="flex items-center gap-2 mb-5 pb-3 border-b border-white/5">
                 <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
                 <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
@@ -705,7 +705,7 @@ function Portfolio() {
           <ScrollBasedVelocity
             text="FULL STACK — REACT — MONGODB — POSTGRES —"
             default_velocity={-3}
-            className="text-center text-5xl font-extralight tracking-[-0.02em] text-foreground/[0.08] md:text-8xl md:leading-none uppercase"
+            className="text-center text-5xl font-extralight tracking-[-0.02em] text-foreground/8 md:text-8xl md:leading-none uppercase"
           />
         </div>
 
@@ -824,7 +824,7 @@ function Portfolio() {
               <TiltCard key={t.id} data-cursor="button">
                 <button
                   onClick={() => setTool(t.id as any)}
-                  className="w-full rounded-2xl border border-white/10 bg-white/[0.02] p-8 text-left hover:border-white/20 transition-colors group"
+                  className="w-full rounded-2xl border border-white/10 bg-white/2 p-8 text-left hover:border-white/20 transition-colors group"
                 >
                   <span className="material-symbols-outlined text-3xl text-foreground/70 mb-6 block group-hover:text-foreground transition-colors">
                     {t.icon}
